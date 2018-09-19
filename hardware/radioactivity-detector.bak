@@ -172,7 +172,7 @@ U 1 1 5A538563
 P 9850 3500
 F 0 "J1" H 9850 3600 50  0000 C CNN
 F 1 "Conn_01x02" H 9850 3300 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch1.27mm" H 9850 3500 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x01_Pitch2.54mm" H 9850 3500 50  0001 C CNN
 F 3 "" H 9850 3500 50  0001 C CNN
 	1    9850 3500
 	1    0    0    -1  
@@ -194,7 +194,7 @@ U 1 1 5A54AF26
 P 7300 3600
 F 0 "C5" H 7325 3700 50  0000 L CNN
 F 1 "1n" H 7325 3500 50  0000 L CNN
-F 2 "Capacitors_SMD:C_1206" H 7338 3450 50  0001 C CNN
+F 2 "Capacitors_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm" H 7338 3450 50  0001 C CNN
 F 3 "" H 7300 3600 50  0001 C CNN
 	1    7300 3600
 	0    1    1    0   
@@ -249,7 +249,7 @@ U 1 1 5A54DDE0
 P 9850 2550
 F 0 "J2" H 9850 2650 50  0000 C CNN
 F 1 "Conn_01x02" H 9850 2350 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch1.27mm" H 9850 2550 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x01_Pitch2.54mm" H 9850 2550 50  0001 C CNN
 F 3 "" H 9850 2550 50  0001 C CNN
 	1    9850 2550
 	1    0    0    -1  
@@ -271,7 +271,7 @@ U 1 1 5A54DEAF
 P 9250 2550
 F 0 "L1" V 9200 2550 50  0000 C CNN
 F 1 "L_Core_Ferrite" V 9360 2550 50  0000 C CNN
-F 2 "Inductors_SMD:L_0603" H 9250 2550 50  0001 C CNN
+F 2 "Inductors_SMD:L_1812" H 9250 2550 50  0001 C CNN
 F 3 "" H 9250 2550 50  0001 C CNN
 	1    9250 2550
 	0    -1   -1   0   
@@ -354,9 +354,7 @@ F 3 "" H 8100 4150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6050 3700 6200 3700
-Wire Wire Line
-	6200 3700 6300 3700
+	6050 3700 6300 3700
 Wire Wire Line
 	5750 2550 5750 3150
 Wire Wire Line
@@ -364,26 +362,18 @@ Wire Wire Line
 Wire Wire Line
 	5750 4150 5750 4000
 Wire Wire Line
-	5750 3450 5750 3500
-Wire Wire Line
-	5750 3500 5750 3700
+	5750 3450 5750 3700
 Connection ~ 5750 3500
 Wire Wire Line
-	6200 2950 6200 3250
-Wire Wire Line
-	6200 3250 6200 3700
+	6200 2950 6200 3700
 Wire Wire Line
 	6200 3250 6550 3250
 Wire Wire Line
 	6850 3250 6950 3250
 Wire Wire Line
-	6950 2950 6950 3250
+	6950 2950 6950 3600
 Wire Wire Line
-	6950 3250 6950 3600
-Wire Wire Line
-	6900 3600 6950 3600
-Wire Wire Line
-	6950 3600 7150 3600
+	6900 3600 7150 3600
 Wire Wire Line
 	6850 2950 6950 2950
 Connection ~ 6950 3250
@@ -401,17 +391,13 @@ Wire Wire Line
 	9600 3600 9650 3600
 Connection ~ 6950 3600
 Wire Wire Line
-	5450 3500 5750 3500
-Wire Wire Line
-	5750 3500 6300 3500
+	5450 3500 6300 3500
 Wire Wire Line
 	8500 3800 8500 4150
 Wire Wire Line
 	7450 3600 7500 3600
 Wire Wire Line
-	7800 3600 8250 3600
-Wire Wire Line
-	8250 3600 8300 3600
+	7800 3600 8300 3600
 Wire Wire Line
 	8600 3900 8250 3900
 Wire Wire Line
@@ -422,15 +408,11 @@ Wire Wire Line
 Wire Wire Line
 	8950 3900 8950 3500
 Wire Wire Line
-	8900 3500 8950 3500
-Wire Wire Line
-	8950 3500 9650 3500
+	8900 3500 9650 3500
 Connection ~ 8950 3500
 Connection ~ 6500 2550
 Wire Wire Line
-	8500 2550 8500 2650
-Wire Wire Line
-	8500 2650 8500 3200
+	8500 2550 8500 3200
 Wire Wire Line
 	6050 3700 6050 3750
 Wire Wire Line
@@ -440,17 +422,11 @@ Wire Wire Line
 Wire Wire Line
 	9200 2650 9200 4150
 Wire Wire Line
-	9400 2550 9450 2550
-Wire Wire Line
-	9450 2550 9650 2550
+	9400 2550 9650 2550
 Wire Wire Line
 	5450 3500 5450 3700
 Wire Wire Line
-	8100 3300 8100 3400
-Wire Wire Line
-	8100 3400 8100 3700
-Wire Wire Line
-	8100 3700 8100 3750
+	8100 3300 8100 3750
 Wire Wire Line
 	8300 3400 8100 3400
 Connection ~ 8100 3400
@@ -473,9 +449,7 @@ Wire Wire Line
 	7250 2650 6500 2650
 Connection ~ 6500 2650
 Wire Wire Line
-	6500 2550 6500 2650
-Wire Wire Line
-	6500 2650 6500 3300
+	6500 2550 6500 3300
 $Comp
 L C C6
 U 1 1 5A550718
@@ -557,15 +531,7 @@ Wire Wire Line
 Wire Wire Line
 	9450 3000 9450 4150
 Wire Wire Line
-	5750 2550 6500 2550
-Wire Wire Line
-	6500 2550 8100 2550
-Wire Wire Line
-	8100 2550 8500 2550
-Wire Wire Line
-	8500 2550 9050 2550
-Wire Wire Line
-	9050 2550 9100 2550
+	5750 2550 9100 2550
 Wire Wire Line
 	9450 2700 9450 2550
 Connection ~ 9450 2550
