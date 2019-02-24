@@ -24,3 +24,4 @@ do
     rm $filename.pdf
     rm texput.log
 done
+
