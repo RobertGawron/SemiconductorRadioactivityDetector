@@ -1,3 +1,4 @@
 (fp_lib_table
   (lib (name SemiconductorRadioactivityDetector)(type KiCad)(uri .)(options "")(descr ""))
+  (lib (name hardware)(type KiCad)(uri C:/Users/robert/Documents/repositories/GM4/SemiconductorRadioactivityDetector/hardware)(options "")(descr ""))
 )
