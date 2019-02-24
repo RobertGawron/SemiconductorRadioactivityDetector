@@ -1,36 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:power
-LIBS:device
-LIBS:switches
-LIBS:relays
-LIBS:motors
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
 LIBS:radioactivity-detector-cache
 EELAYER 26 0
 EELAYER END
@@ -47,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L D_Photo D1
+L Device:D_Photo D1
 U 1 1 5A537622
 P 6050 3950
 F 0 "D1" H 6070 4020 50  0000 L CNN
@@ -58,7 +26,7 @@ F 3 "" H 6000 3950 50  0001 C CNN
 	0    -1   1    0   
 $EndComp
 $Comp
-L GND #PWR01
+L power:GND #PWR01
 U 1 1 5A5376C9
 P 5750 4150
 F 0 "#PWR01" H 5750 3900 50  0001 C CNN
@@ -69,7 +37,7 @@ F 3 "" H 5750 4150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R3
+L Device:R R3
 U 1 1 5A537870
 P 6700 3250
 F 0 "R3" V 6780 3250 50  0000 C CNN
@@ -80,7 +48,7 @@ F 3 "" H 6700 3250 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L R R2
+L Device:R R2
 U 1 1 5A537971
 P 5750 3850
 F 0 "R2" V 5830 3850 50  0000 C CNN
@@ -91,7 +59,7 @@ F 3 "" H 5750 3850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R1
+L Device:R R1
 U 1 1 5A5379A2
 P 5750 3300
 F 0 "R1" V 5830 3300 50  0000 C CNN
@@ -102,7 +70,7 @@ F 3 "" H 5750 3300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C1
+L Device:C C1
 U 1 1 5A5379D1
 P 5450 3850
 F 0 "C1" H 5475 3950 50  0000 L CNN
@@ -113,7 +81,7 @@ F 3 "" H 5450 3850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C3
+L Device:C C3
 U 1 1 5A537AAB
 P 6700 2950
 F 0 "C3" H 6725 3050 50  0000 L CNN
@@ -124,7 +92,7 @@ F 3 "" H 6700 2950 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L GND #PWR02
+L power:GND #PWR02
 U 1 1 5A537E00
 P 5450 4150
 F 0 "#PWR02" H 5450 3900 50  0001 C CNN
@@ -135,7 +103,7 @@ F 3 "" H 5450 4150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR03
+L power:GND #PWR03
 U 1 1 5A5381A8
 P 6500 4150
 F 0 "#PWR03" H 6500 3900 50  0001 C CNN
@@ -146,7 +114,7 @@ F 3 "" H 6500 4150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C2
+L Device:C C2
 U 1 1 5A538230
 P 7250 2850
 F 0 "C2" H 7275 2950 50  0000 L CNN
@@ -157,7 +125,7 @@ F 3 "" H 7250 2850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR04
+L power:GND #PWR04
 U 1 1 5A53840E
 P 7250 3050
 F 0 "#PWR04" H 7250 2800 50  0001 C CNN
@@ -168,7 +136,7 @@ F 3 "" H 7250 3050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Conn_01x02 J1
+L Connector:Conn_01x02_Female J1
 U 1 1 5A538563
 P 9950 3500
 F 0 "J1" H 9950 3600 50  0000 C CNN
@@ -179,7 +147,7 @@ F 3 "" H 9950 3500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR05
+L power:GND #PWR05
 U 1 1 5A5385ED
 P 9700 4150
 F 0 "#PWR05" H 9700 3900 50  0001 C CNN
@@ -190,7 +158,7 @@ F 3 "" H 9700 4150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C5
+L Device:C C5
 U 1 1 5A54AF26
 P 7300 3600
 F 0 "C5" H 7325 3700 50  0000 L CNN
@@ -201,7 +169,7 @@ F 3 "" H 7300 3600 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R5
+L Device:R R5
 U 1 1 5A54AF76
 P 7650 3600
 F 0 "R5" V 7730 3600 50  0000 C CNN
@@ -212,7 +180,7 @@ F 3 "" H 7650 3600 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L R R6
+L Device:R R6
 U 1 1 5A54AFD7
 P 8750 3900
 F 0 "R6" V 8830 3900 50  0000 C CNN
@@ -223,7 +191,7 @@ F 3 "" H 8750 3900 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR06
+L power:GND #PWR06
 U 1 1 5A54B1A7
 P 8500 4150
 F 0 "#PWR06" H 8500 3900 50  0001 C CNN
@@ -234,7 +202,7 @@ F 3 "" H 8500 4150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR07
+L power:GND #PWR07
 U 1 1 5A54BDCB
 P 6050 4150
 F 0 "#PWR07" H 6050 3900 50  0001 C CNN
@@ -245,7 +213,7 @@ F 3 "" H 6050 4150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Conn_01x02 J2
+L Connector:Conn_01x02_Female J2
 U 1 1 5A54DDE0
 P 9950 2550
 F 0 "J2" H 9950 2650 50  0000 C CNN
@@ -256,7 +224,7 @@ F 3 "" H 9950 2550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR08
+L power:GND #PWR08
 U 1 1 5A54DE86
 P 9300 4150
 F 0 "#PWR08" H 9300 3900 50  0001 C CNN
@@ -267,7 +235,7 @@ F 3 "" H 9300 4150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L L_Core_Ferrite L1
+L Device:L_Core_Ferrite L1
 U 1 1 5A54DEAF
 P 9300 2550
 F 0 "L1" V 9250 2550 50  0000 C CNN
@@ -278,7 +246,7 @@ F 3 "" H 9300 2550 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L OPA333xxD U1
+L Amplifier_Operational:OPA330xxD U1
 U 1 1 5A54E9B2
 P 6600 3600
 F 0 "U1" H 6600 3850 50  0000 L CNN
@@ -289,7 +257,7 @@ F 3 "" H 6750 3750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L OPA333xxD U2
+L Amplifier_Operational:OPA330xxD U2
 U 1 1 5A54EB63
 P 8600 3500
 F 0 "U2" H 8600 3750 50  0000 L CNN
@@ -300,7 +268,7 @@ F 3 "" H 8750 3650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R4
+L Device:R R4
 U 1 1 5A54F51F
 P 8100 3150
 F 0 "R4" V 8180 3150 50  0000 C CNN
@@ -311,7 +279,7 @@ F 3 "" H 8100 3150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R7
+L Device:R R7
 U 1 1 5A54F5CD
 P 8100 3900
 F 0 "R7" V 8180 3900 50  0000 C CNN
@@ -322,7 +290,7 @@ F 3 "" H 8100 3900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C4
+L Device:C C4
 U 1 1 5A54F62E
 P 7800 3950
 F 0 "C4" H 7825 4050 50  0000 L CNN
@@ -333,7 +301,7 @@ F 3 "" H 7800 3950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR09
+L power:GND #PWR09
 U 1 1 5A54F69A
 P 7800 4150
 F 0 "#PWR09" H 7800 3900 50  0001 C CNN
@@ -344,7 +312,7 @@ F 3 "" H 7800 4150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR010
+L power:GND #PWR010
 U 1 1 5A54F6DB
 P 8100 4150
 F 0 "#PWR010" H 8100 3900 50  0001 C CNN
@@ -452,7 +420,7 @@ Connection ~ 6500 2650
 Wire Wire Line
 	6500 2550 6500 2650
 $Comp
-L C C6
+L Device:C C6
 U 1 1 5A550718
 P 8750 2850
 F 0 "C6" H 8775 2950 50  0000 L CNN
@@ -463,7 +431,7 @@ F 3 "" H 8750 2850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR011
+L power:GND #PWR011
 U 1 1 5A55076B
 P 8750 3050
 F 0 "#PWR011" H 8750 2800 50  0001 C CNN
@@ -481,7 +449,7 @@ Wire Wire Line
 	8750 2650 8500 2650
 Connection ~ 8500 2650
 $Comp
-L C C7
+L Device:C C7
 U 1 1 5A550D62
 P 9050 2850
 F 0 "C7" H 9075 2950 50  0000 L CNN
@@ -492,7 +460,7 @@ F 3 "" H 9050 2850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CP C8
+L Device:CP C8
 U 1 1 5A550DF6
 P 9550 2850
 F 0 "C8" H 9575 2950 50  0000 L CNN
@@ -506,7 +474,7 @@ Wire Wire Line
 	9050 2550 9050 2700
 Connection ~ 9050 2550
 $Comp
-L GND #PWR012
+L power:GND #PWR012
 U 1 1 5A5510FD
 P 9050 4150
 F 0 "#PWR012" H 9050 3900 50  0001 C CNN
@@ -517,7 +485,7 @@ F 3 "" H 9050 4150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR013
+L power:GND #PWR013
 U 1 1 5A551147
 P 9550 4150
 F 0 "#PWR013" H 9550 3900 50  0001 C CNN
