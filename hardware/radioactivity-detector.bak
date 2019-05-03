@@ -809,30 +809,6 @@ $EndComp
 Wire Wire Line
 	2100 6250 2100 6150
 $Comp
-L Mechanical:MountingHole_Pad H4
-U 1 1 5C59D3D1
-P 3200 6050
-F 0 "H4" H 3300 6101 50  0000 L CNN
-F 1 "MountingHole_Pad" H 3300 6010 50  0000 L CNN
-F 2 "Mounting_Holes:MountingHole_3.5mm_Pad" H 3200 6050 50  0001 C CNN
-F 3 "~" H 3200 6050 50  0001 C CNN
-	1    3200 6050
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR07
-U 1 1 5C59D3D8
-P 3200 6250
-F 0 "#PWR07" H 3200 6000 50  0001 C CNN
-F 1 "GND" H 3200 6100 50  0000 C CNN
-F 2 "" H 3200 6250 50  0001 C CNN
-F 3 "" H 3200 6250 50  0001 C CNN
-	1    3200 6250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3200 6250 3200 6150
-$Comp
 L Amplifier_Operational:LM358_DFN U4
 U 1 1 5C739C0D
 P 9000 2850
