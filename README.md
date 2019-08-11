@@ -15,6 +15,8 @@ There are many ways to measure radioactivity level, semiconductor detectors sens
 
 ## Hardware
 
+PCB project was done in KiCAD.
+
 * [HW overview of the detector
 ](https://github.com/RobertGawron/SemiconductorRadioactivityDetector/wiki/HW-overview-of-the-detector) 
 * [12V -> 5V logic converter
@@ -23,4 +25,6 @@ There are many ways to measure radioactivity level, semiconductor detectors sens
 
 # Software
 
-Firmware for data acquisition comes from my [Geiger Counter](https://github.com/RobertGawron/GeigerMullerCounter) project.
+* Firmware for data acquisition comes from my [Geiger Counter](https://github.com/RobertGawron/GeigerMullerCounter) project.
+* ["Data processing and firmware flashing" node architecture
+](https://github.com/RobertGawron/SemiconductorRadioactivityDetector/wiki/%22Data-processing-and-firmware-flashing%22-node-architecture)
