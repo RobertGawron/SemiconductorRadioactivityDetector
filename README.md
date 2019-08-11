@@ -1,5 +1,10 @@
 # SemiconductorRadioactivityDetector
 
+[![Build Status](https://travis-ci.com/RobertGawron/SemiconductorRadioactivityDetector.svg?branch=master)](https://travis-ci.com/RobertGawron/SemiconductorRadioactivityDetector)
+
+(CI is checking only documentation)
+
+---
 
 ## Summary
 
