@@ -27,7 +27,7 @@
 \node (comparator) [component, below=of amplifier] {Comparator};
 \node (converter) [system, right=of comparator] {12V to 3V3\\ logic converter};
 
-\node (cpu) [system, right=of converter] {Acquisition\\ (STM32F103RBT6)};
+\node (cpu) [system, below=of converter] {Acquisition\\ (STM32F103RBT6)};
 
 \node (pi) [system, below=of cpu] {Data processing and firmware flashing\\ (RaspberryPi 3B)};
 \node (pc) [system, below=of pi] {Local PC\\ (OS independent)};
@@ -47,7 +47,7 @@
 
 \draw [-{Latex[scale=3.0]}] (amplifier) -- node[anchor=south, minimum height=.25cm, draw=none] {} (comparator);
 \draw [-{Latex[scale=3.0]}] (comparator) -- node[anchor=south, minimum height=.25cm, draw=none] {} (converter);
-\draw [-{Latex[scale=3.0]}] (converter) -- node[anchor=south, minimum height=.25cm, draw=none] {3V3 pulses} (cpu);
+\draw [-{Latex[scale=3.0]}] (converter) -- node[anchor=west, minimum height=.25cm, draw=none] {3V3 pulses} (cpu);
 \draw [-{Latex[scale=3.0]}] (cpu) -- node[anchor=west, minimum height=.25cm, draw=none] {USB} (pi);
 
 \draw [-{Latex[scale=3.0]}] (pi) -- node[anchor=west, minimum height=.25cm, draw=none] {Ethernet} (pc);
