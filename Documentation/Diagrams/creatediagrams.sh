@@ -13,15 +13,10 @@ do
     # convert .tex to .png 
 
     pdflatex $filename.tex
+    touch $filename-tmp.pdf
     pdfcrop $filename.pdf $filename-tmp.pdf
     pdftoppm -png -r 800 $filename-tmp.pdf $filename
 
-    # remove junk files
-
-    rm $filename.aux
-    rm $filename.log
-    rm $filename-tmp.pdf
-    rm $filename.pdf
-    rm texput.log
 done
 
+rm *.aux *.log *.pdf
