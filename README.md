@@ -10,7 +10,7 @@ There are many ways to measure radioactivity level, semiconductor detectors sens
 
 ## Overall system architecture
 
-TODO
+![architecture](https://raw.githubusercontent.com/RobertGawron/SemiconductorRadioactivityDetector/master/Documentation/Diagrams/ArchitectureOverview-1.png)
 
 
 ## Hardware
@@ -23,4 +23,4 @@ TODO
 
 # Software
 
-TODO
+Firmware for data acquisition comes from my [Geiger Counter](https://github.com/RobertGawron/GeigerMullerCounter) project.
