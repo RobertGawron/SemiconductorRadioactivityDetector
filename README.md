@@ -10,10 +10,12 @@ There are many ways to measure radioactivity level, semiconductor detectors sens
 
 ## Overall system architecture
 
-TODO
+![architecture](https://raw.githubusercontent.com/RobertGawron/SemiconductorRadioactivityDetector/master/Documentation/Diagrams/ArchitectureOverview-1.png)
 
 
 ## Hardware
+
+PCB project was done in KiCAD.
 
 * [HW overview of the detector
 ](https://github.com/RobertGawron/SemiconductorRadioactivityDetector/wiki/HW-overview-of-the-detector) 
@@ -23,4 +25,6 @@ TODO
 
 # Software
 
-TODO
+* Firmware for data acquisition comes from my [Geiger Counter](https://github.com/RobertGawron/GeigerMullerCounter) project.
+* ["Data processing and firmware flashing" node architecture
+](https://github.com/RobertGawron/SemiconductorRadioactivityDetector/wiki/%22Data-processing-and-firmware-flashing%22-node-architecture)
