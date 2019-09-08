@@ -24,8 +24,8 @@ PCB project was done in KiCAD.
 
 * [HW overview of the detector
 ](https://github.com/RobertGawron/SemiconductorRadioactivityDetector/wiki/HW-overview-of-the-detector) 
-* [12V -> 3V3 logic converter
-](https://github.com/RobertGawron/SemiconductorRadioactivityDetector/wiki/HW-overview-of-the-detector) 
+* [12V  to  3V3 logic converter
+](https://github.com/RobertGawron/SemiconductorRadioactivityDetector/wiki/12V--to--3V3-logic-converter) 
 
 
 ## Software
