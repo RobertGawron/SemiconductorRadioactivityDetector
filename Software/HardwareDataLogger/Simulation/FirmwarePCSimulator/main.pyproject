@@ -1,0 +1,3 @@
+{
+    "files": ["main.py", "device_under_test.py", "gui.ui"]
+}
