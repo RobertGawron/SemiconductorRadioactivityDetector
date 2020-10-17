@@ -33,7 +33,11 @@ class DeviceUnderTest:
         # this should be stripped application
         return logged_data[:-3]
 
-    
+
+    def pressKey(self):
+        self.dut.Lib_GMLoggerSIM_KeyPress()
+
+
     def getDisplayLength(self):
         self.dut.Lib_GMLoggerSIM_GetDisplayLength.restype = c_uint8
         return self.dut.Lib_GMLoggerSIM_GetDisplayLength()

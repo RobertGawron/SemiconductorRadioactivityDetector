@@ -38,8 +38,12 @@
 #include "stm32f0xx_it.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "gm_logger.h"
+#include "gm_display_updater.h"
 #include "gm_measurement_calculator.h"
+#include "gm_keyboard_keys.h"
+#include "gm_keyboard.h"
+#include "gm_logger.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -162,12 +166,18 @@ void SysTick_Handler(void)
 void EXTI4_15_IRQHandler(void)
 {
   /* USER CODE BEGIN EXTI4_15_IRQn 0 */
-
+  if ((EXTI->PR & EXTI_PR_PR13_Msk) != 0)
+  {
+    GMKeyboard_OnKeyPressDetection(GMKEYBOARD_KEY_UP);
+  }
+  else
+  {
+    GMMeasurementCalculator_OnGMPulseObserved();
+  }
   /* USER CODE END EXTI4_15_IRQn 0 */
   HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_5);
   HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_13);
   /* USER CODE BEGIN EXTI4_15_IRQn 1 */
-  GMMeasurementCalculator_OnGMPulseObserved();
   /* USER CODE END EXTI4_15_IRQn 1 */
 }
 
@@ -181,10 +191,9 @@ void TIM2_IRQHandler(void)
   /* USER CODE END TIM2_IRQn 0 */
   HAL_TIM_IRQHandler(&htim2);
   /* USER CODE BEGIN TIM2_IRQn 1 */
-
-  GMLogger_LogMeasurement();
-  // TODO add logic here
   GMMeasurementCalculator_OnSamplingDone();
+  GMLogger_LogMeasurement();
+  GMDisplayUpdater_UpdateMeasurements();
   /* USER CODE END TIM2_IRQn 1 */
 }
 

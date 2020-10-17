@@ -59,9 +59,9 @@ UTEST(GMCircularBuffer_Insert, Insert_Max_Amount_Of_Elements_Expect_Correct_Orde
 
         uint16_t indexOfMeassurementInOriginalMeassurementSet = ((GM_CIRCULAR_BUFFER_MAX_ELEMENTS - 1)- i);
 
-        GMCircularBuffer_GetMaxElementStatus_t isRetreiveOK = GMCircularBuffer_GetElement(&elementRetreived, i);
+        GMCircularBuffer_GetElementStatus_t isRetreiveOK = GMCircularBuffer_GetElement(&elementRetreived, i);
 
-        EXPECT_EQ(isRetreiveOK, GMCIRCULARBUFFER_GETMAXELEMENT_OK);
+        EXPECT_EQ(isRetreiveOK, GMCIRCULARBUFFER_GETELEMENT_OK);
         EXPECT_EQ(measurementIn[indexOfMeassurementInOriginalMeassurementSet], elementRetreived);
     }
 }

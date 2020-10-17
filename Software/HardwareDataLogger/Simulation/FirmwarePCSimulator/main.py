@@ -12,21 +12,23 @@ class MainWindow(QMainWindow):
         self.dut = DeviceUnderTest()
         self.setupWidgets()
         self.startTimers()
+        self.onHWDisplayUpdate()
         self.show()
 
     def setupWidgets(self):
         uic.loadUi("gui.ui", self)
 
         self.WidgetGenerateGMPulse = self.findChild(QPushButton, "WidgetGenerateGMPulse")
+        self.WidgetPushHWKey= self.findChild(QPushButton, "WidgetPushHWKey")
         self.WidgetLogger = self.findChild(QTextBrowser, "WidgetLogger")
         self.WidgetHWDisplay= self.findChild(QLabel, "WidgetHWDisplay")
- 
+                
         self.WidgetGenerateGMPulse.clicked.connect(self.onGenerateGMPulse)
-        
+        self.WidgetPushHWKey.clicked.connect(self.onPressHWKey)
 
     def startTimers(self):
         self.dutTimer = QtCore.QTimer()
-        self.dutTimer.setInterval(10)
+        self.dutTimer.setInterval(3000)
         self.dutTimer.timeout.connect(self.onTimer)
         self.dutTimer.start()
 
@@ -46,6 +48,11 @@ class MainWindow(QMainWindow):
         local_timestamp = datetime.now()
         data_with_timestamp = "{}: {}".format(local_timestamp, logged_data)
         self.WidgetLogger.append (data_with_timestamp)
+
+
+    def onPressHWKey(self):
+        self.dut.pressKey()
+        self.onHWDisplayUpdate()
 
 
     def onHWDisplayUpdate(self):

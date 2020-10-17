@@ -33,16 +33,9 @@
 /* SSD1306 data buffer */
 extern uint8_t SSD1306_Buffer[SSD1306_WIDTH * SSD1306_HEIGHT / 8];
 
-/* Private SSD1306 structure */
-typedef struct {
-	uint16_t CurrentX;
-	uint16_t CurrentY;
-	uint8_t Inverted;
-	uint8_t Initialized;
-} SSD1306_t;
 
 /* Private variable */
-static SSD1306_t SSD1306;
+SSD1306_t SSD1306;
 
 
 
