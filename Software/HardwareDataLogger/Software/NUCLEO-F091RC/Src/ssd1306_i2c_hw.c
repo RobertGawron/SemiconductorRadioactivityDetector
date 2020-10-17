@@ -13,7 +13,11 @@
 //
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+/* Write command */
+#define SSD1306_WRITECOMMAND(command)      ssd1306_I2C_Write(SSD1306_I2C_ADDR, 0x00, (command))
+
 extern I2C_HandleTypeDef hi2c1;
+extern SSD1306_t SSD1306;
 
 uint8_t SSD1306_Buffer[SSD1306_WIDTH * SSD1306_HEIGHT / 8];
 

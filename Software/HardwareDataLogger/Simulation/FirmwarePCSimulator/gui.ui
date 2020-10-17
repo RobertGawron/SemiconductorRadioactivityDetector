@@ -50,9 +50,9 @@
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton">
+           <widget class="QPushButton" name="WidgetPushHWKey">
             <property name="text">
-             <string>Push HW button</string>
+             <string>Push HW Key</string>
             </property>
            </widget>
           </item>

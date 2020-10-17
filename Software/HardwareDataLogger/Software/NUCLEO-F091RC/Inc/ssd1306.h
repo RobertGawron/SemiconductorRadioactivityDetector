@@ -77,7 +77,13 @@ typedef enum {
 	SSD1306_COLOR_WHITE = 0x01  /*!< Pixel is set. Color depends on LCD */
 } SSD1306_COLOR_t;
 
-
+/* Private SSD1306 structure */
+typedef struct {
+	uint16_t CurrentX;
+	uint16_t CurrentY;
+	uint8_t Inverted;
+	uint8_t Initialized;
+} SSD1306_t;
 
 /**
  * @brief  Initializes SSD1306 LCD

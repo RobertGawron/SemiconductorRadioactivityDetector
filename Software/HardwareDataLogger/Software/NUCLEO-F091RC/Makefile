@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -Wall -fpic -I./Inc
+CFLAGS = -Wall -fpic -I./Inc -DDEBUG_PRINTS_ENABLED
 DUT_SRC_PATH = ./Src
 STUB_SRC_PATH = ./DriversPCSimulation
 default: all
@@ -10,6 +10,11 @@ all: simulation.o \
 	gm_display_labels.o \
 	gm_measurement_calculator.o \
 	gm_logger.o \
+	gm_keyboard.o \
+	gm_histogram.o \
+	gm_view_bargraph.o \
+	gm_view_histogram.o \
+	gm_view_initialization.o \
 	gm_display_hw.o \
 	gm_logger_sim.o \
 	ssd1306_i2c_sim.o \
@@ -21,6 +26,11 @@ all: simulation.o \
 		gm_display_labels.o \
 		gm_measurement_calculator.o \
 		gm_logger.o \
+		gm_keyboard.o \
+		gm_histogram.o \
+		gm_view_bargraph.o \
+		gm_view_histogram.o \
+		gm_view_initialization.o \
 		gm_display_hw.o \
 		gm_logger_sim.o \
 		ssd1306_i2c_sim.o \
@@ -44,6 +54,22 @@ gm_measurement_calculator.o:  $(DUT_SRC_PATH)/gm_measurement_calculator.c
 
 gm_logger.o:  $(DUT_SRC_PATH)/gm_logger.c
 	$(CC) $(CFLAGS) -c $(DUT_SRC_PATH)/gm_logger.c	
+
+gm_keyboard.o:  $(DUT_SRC_PATH)/gm_keyboard.c
+	$(CC) $(CFLAGS) -c $(DUT_SRC_PATH)/gm_keyboard.c
+
+gm_histogram.o:  $(DUT_SRC_PATH)/gm_histogram.c
+	$(CC) $(CFLAGS) -c $(DUT_SRC_PATH)/gm_histogram.c
+
+gm_view_bargraph.o:  $(DUT_SRC_PATH)/gm_view_bargraph.c
+	$(CC) $(CFLAGS) -c $(DUT_SRC_PATH)/gm_view_bargraph.c
+
+gm_view_histogram.o:  $(DUT_SRC_PATH)/gm_view_histogram.c
+	$(CC) $(CFLAGS) -c $(DUT_SRC_PATH)/gm_view_histogram.c
+
+gm_view_initialization.o:  $(DUT_SRC_PATH)/gm_view_initialization.c
+	$(CC) $(CFLAGS) -c $(DUT_SRC_PATH)/gm_view_initialization.c
+
 
 gm_display_hw.o:  $(DUT_SRC_PATH)/gm_display_hw.c
 	$(CC) $(CFLAGS) -c $(DUT_SRC_PATH)/gm_display_hw.c	
