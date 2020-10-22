@@ -27,7 +27,7 @@
 \node (comparator) [component, below=of amplifier] {Comparator};
 \node (converter) [system, right=of comparator] {12V to 3V3\\ logic converter};
 
-\node (cpu) [system, below=of converter] {Acquisition\\ (STM32F103RBT6)};
+\node (cpu) [system, below=of converter] {Pulse Counter\\ (HardwareDataLogger sub-project)};
 
 \node (pi) [system, below=of cpu] {Data processing and firmware flashing\\ (RaspberryPi 3B)};
 \node (pc) [system, below=of pi] {Local PC\\ (OS independent)};
