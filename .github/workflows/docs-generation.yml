@@ -1,0 +1,26 @@
+name: Docs Generation
+
+on: [push]
+
+jobs:
+  build_and_test:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: install pytest and run tests
+      run: |
+        sudo apt-get install -y texlive-latex-base texlive-latex-extra texlive-extra-utils poppler-utils
+        cd ./Documentation/Diagrams
+        chmod +x ./creatediagrams.sh
+        ./creatediagrams.sh
+        mkdir result
+        cp *png result
+
+    - name: Archive latex docs
+      uses: actions/upload-artifact@v2
+      if: always()
+      with:
+        name: Latex Documents
+        path: ./Documentation/Diagrams/result
