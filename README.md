@@ -15,6 +15,7 @@ There are many ways to measure radioactivity level, semiconductor detectors sens
 
 ![architecture](https://raw.githubusercontent.com/RobertGawron/SemiconductorRadioactivityDetector/master/Documentation/Diagrams/ArchitectureOverview-1.png)
 
+[HardwareDataLogger](https://github.com/RobertGawron/HardwareDataLogger) is a simple pulse counter based on NUCLEO-F091RC with additional shield (for real-time data display using LCD).
 
 ## Hardware
 
@@ -28,6 +29,6 @@ PCB project was done in KiCAD.
 
 ## Software
 
-* Firmware for data acquisition comes from my [Geiger Counter](https://github.com/RobertGawron/GeigerMullerCounter) project.
-* ["Data processing and firmware flashing" node architecture
+
+* [Architecture of "Data processing and firmware flashing" node
 ](https://github.com/RobertGawron/SemiconductorRadioactivityDetector/wiki/%22Data-processing-and-firmware-flashing%22-node-architecture)
