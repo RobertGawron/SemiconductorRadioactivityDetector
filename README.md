@@ -1,8 +1,6 @@
 # SemiconductorRadioactivityDetector
 
-[![Build Status](https://travis-ci.com/RobertGawron/SemiconductorRadioactivityDetector.svg?branch=master)](https://travis-ci.com/RobertGawron/SemiconductorRadioactivityDetector)
-
-(CI is checking only documentation)
+![Docs Generation](https://github.com/RobertGawron/SemiconductorRadioactivityDetector/workflows/Docs%20Generation/badge.svg)
 
 ---
 
