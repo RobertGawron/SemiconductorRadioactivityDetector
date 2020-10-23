@@ -1,8 +1,6 @@
 # SemiconductorRadioactivityDetector
 
-![Docs Generation](https://github.com/RobertGawron/SemiconductorRadioactivityDetector/workflows/Docs%20Generation/badge.svg)
-
----
+[![Docs Generation](https://github.com/RobertGawron/SemiconductorRadioactivityDetector/workflows/Docs%20Generation/badge.svg)](https://github.com/RobertGawron/SemiconductorRadioactivityDetector/actions?query=workflow%3A%22Docs+Generation%22)
 
 ## Summary
 
