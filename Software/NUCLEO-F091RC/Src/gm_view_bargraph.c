@@ -3,7 +3,6 @@
 #include "gm_view_bargraph.h"
 #include "gm_display_hw.h"
 #include "gm_display_labels.h"
-#include "gm_dose_counter.h"
 #include "gm_measurement.h"
 #include "gm_circular_buffer.h"
 
@@ -76,14 +75,6 @@ void GMViewBargraph_ShowDoseLabel()
 
         stringOffset = strlen(labelDose);
         strcpy(&labelDose[stringOffset], labelMinuteCounter);
-#if 0
-        uint16_t dosage = GMDoseCounter_Calculate();
-        stringOffset = strlen(labelDose);
-        itoa(dosage, &labelDose[stringOffset], base);
-
-        stringOffset = strlen(labelDose);
-        strcpy(&labelDose[stringOffset], labelDosageUnit);
-#endif
     }
     else
     {

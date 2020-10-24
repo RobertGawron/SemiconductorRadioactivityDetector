@@ -34,6 +34,8 @@ static GMDisplayUpdater_ViewSelector_t GMDisplayUpdater_ViewSelector = {
 
 void GMDisplayUpdater_Init()
 {
+    GMDisplayHW_Init();
+
     for(uint8_t i = 0u; i < GMDisplayUpdater_ViewSelector.viewsAmount; i++)
     {
         (GMDisplayUpdater_ViewSelector.views[i].GMDisplayUpdater_Init)();
