@@ -11,7 +11,7 @@ There are many ways to measure radioactivity level, semiconductor detectors sens
 
 ## System architecture
 
-![architecture](https://raw.githubusercontent.com/RobertGawron/SemiconductorRadioactivityDetector/master/Documentation/Diagrams/ArchitectureOverview-1.png)
+<img src="./Documentation/Diagrams/ArchitectureOverview.svg"  width="100%">
 
 [HardwareDataLogger](https://github.com/RobertGawron/HardwareDataLogger) is a simple pulse counter based on NUCLEO-F091RC with additional shield (for real-time data display using LCD).
 
