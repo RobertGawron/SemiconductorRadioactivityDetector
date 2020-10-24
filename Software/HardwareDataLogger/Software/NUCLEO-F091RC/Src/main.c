@@ -47,6 +47,8 @@
 #include "gm_display_updater.h"
 #include "gm_measurement_calculator.h"
 #include "gm_logger.h"
+#include "gm_keyboard.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -127,6 +129,7 @@ int main(void)
   GMDisplayUpdater_Init();
   GMMeasurementCalculator_Init();
   GMLogger_Init();
+  GMKeyboard_Init();
 
   HAL_TIM_Base_Start_IT(&htim2);      //start timer2 in interrupt mode.
 

@@ -1,0 +1,24 @@
+name: Unit Tests
+
+on: [push]
+
+jobs:
+  build_and_test:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Build and run tests      
+      run: |
+        sudo pip install pytest pytest-html
+        cd ./ContinousIntegration
+        chmod +x ./run_unit_tests.sh
+        ./run_unit_tests.sh
+
+    - name: Archive component test results
+      uses: actions/upload-artifact@v2
+      if: always()
+      with:
+        name: Report for Unit Tests
+        path: ./Test/UnitTest/test_*/*xml

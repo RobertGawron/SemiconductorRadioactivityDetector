@@ -35,11 +35,11 @@ void GMViewHistogram_ShowHistogram()
 
     uint8_t graphHeight = DisplayUpdater_LCDHeightBlue;
     uint16_t maxBinValue = GMHistogram_GetMaxBinValue(histogramBinAmount);
-    uint8_t x0 = 0;
-    
 
     if (maxBinValue > 0u)
     {
+        uint8_t x0 = 0;
+        
         for (uint16_t i = 0U; i < histogramBinAmount; i++)
         {
             uint16_t binValue = GMHistogram_GetBinValue(i, histogramBinAmount);
