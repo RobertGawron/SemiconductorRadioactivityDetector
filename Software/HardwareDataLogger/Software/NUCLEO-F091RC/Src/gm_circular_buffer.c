@@ -57,7 +57,7 @@ GMCircularBuffer_GetElementStatus_t GMCircularBuffer_GetElement(GMMeasurement_Va
     }
     else
     {
-        element = 0;
+        *element = 0;
         retValue = GMCIRCULARBUFFER_GETELEMENT_INDEX_OUT_OF_RANGE;
     }
 
@@ -97,8 +97,8 @@ GMCircularBuffer_GetMinMaxElementStatus_t GMCircularBuffer_GetMinMaxElement(GMMe
     else
     {
         // no elements in buffer, so counting max element is pointless
-        minElement = 0;
-        maxElement = 0;
+        *minElement = 0;
+        *maxElement = 0;
         retValue = GMCIRCULARBUFFER_GETMINMAXELEMENT_NO_MEASSUREMENTS;
     }
 

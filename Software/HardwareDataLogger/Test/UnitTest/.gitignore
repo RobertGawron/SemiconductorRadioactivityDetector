@@ -1,2 +1,3 @@
-*.o
-*.exe
+test_*/*.o
+test_*/*.exe
+test_*/*.xml

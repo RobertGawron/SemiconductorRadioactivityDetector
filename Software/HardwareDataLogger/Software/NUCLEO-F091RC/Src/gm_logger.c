@@ -12,7 +12,7 @@ uint8_t txBuffer[TX_BUFFER_SIZE];
 
 void GMLogger_Init()
 {
-
+    GMLoggerHW_Init();
 }
 
 void GMLogger_LogMeasurement()
