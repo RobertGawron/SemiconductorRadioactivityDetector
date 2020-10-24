@@ -1,32 +1,22 @@
-# SemiconductorRadioactivityDetector
+# HardwareDataLogger
 
-[![Docs Generation](https://github.com/RobertGawron/SemiconductorRadioactivityDetector/workflows/Docs%20Generation/badge.svg)](https://github.com/RobertGawron/SemiconductorRadioactivityDetector/actions?query=workflow%3A%22Docs+Generation%22)
+[![Unit Tests](https://github.com/RobertGawron/HardwareDataLogger/workflows/Unit%20Tests/badge.svg)](https://github.com/RobertGawron/HardwareDataLogger/actions?query=workflow%3A%22Unit+Tests%22) [![Static Code Analysis](https://github.com/RobertGawron/HardwareDataLogger/workflows/Static%20Code%20Analysis/badge.svg)](https://github.com/RobertGawron/HardwareDataLogger/actions?query=workflow%3A%22Static+Code+Analysis%22)
 
 ## Summary
 
-There are many ways to measure radioactivity level, semiconductor detectors sense interactions between ionizing radiation and p-n junction. Because in hobbyist area most popular are Geiger-Muller based detectors (in short: not a semiconductor but lamp based devices), I think it's a cool idea to take a look at this approach.
+It's a simple hardware data logger, that presents data both on LCD and via COM port so it's possible to gather data using PC and do further analysis. Currently it supports only pulse counting.
 
-![sensor viewed from the inside](https://1.bp.blogspot.com/-7oBQ1ETBhvU/XMwRGNKZN2I/AAAAAAAAHOM/hjzkPQSv9h0YTSOj255yFZFmSvXWYKPdQCLcBGAs/s1600/IMG_3274.JPG)
-
-
-## System architecture
-
-<img src="./Documentation/Diagrams/ArchitectureOverview.svg"  width="100%">
-
-[HardwareDataLogger](https://github.com/RobertGawron/HardwareDataLogger) is a simple pulse counter based on NUCLEO-F091RC with additional shield (for real-time data display using LCD).
+![Device Picture](https://raw.githubusercontent.com/RobertGawron/HardwareDataLogger/main/Documentation/Pictures/Device_10_01_2019.jpg)
 
 ## Hardware
 
-PCB project was done in KiCAD.
+The device is based on NUCLEO-F091RC evaluation board with added custom-made shield.
 
-* [HW overview of the detector
-](https://github.com/RobertGawron/SemiconductorRadioactivityDetector/wiki/HW-overview-of-the-detector) 
-* [12V  to  3V3 logic converter
-](https://github.com/RobertGawron/SemiconductorRadioactivityDetector/wiki/12V--to--3V3-logic-converter) 
+TODO: hardware documentation of the shield.
 
 
 ## Software
 
+Firmware were made using CubeMX, Eclipse is used for firmware development.
 
-* [Architecture of "Data processing and firmware flashing" node
-](https://github.com/RobertGawron/SemiconductorRadioactivityDetector/wiki/%22Data-processing-and-firmware-flashing%22-node-architecture)
+PC Simulation of Firmware was made using Python+Qt, it uses build .so variant of the firmware (Makefile is used for firmware variant generation).
