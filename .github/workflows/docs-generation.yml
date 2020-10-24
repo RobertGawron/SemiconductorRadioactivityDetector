@@ -9,18 +9,18 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: install pytest and run tests
+    - name: install latex and generate documents
       run: |
-        sudo apt-get install -y texlive-latex-base texlive-latex-extra texlive-extra-utils poppler-utils
-        cd ./Documentation/Diagrams
-        chmod +x ./creatediagrams.sh
-        ./creatediagrams.sh
+        sudo apt-get install -y texlive-latex-base texlive-latex-extra texlive-extra-utils poppler-utils pdf2svg
+        cd ./ContinousIntegration
+        chmod +x ./run_generate_docs.sh
+        ./run_generate_docs.sh
         mkdir result
-        cp *png result
+        cp ../Documentation/Diagrams/*.png ../Documentation/Diagrams/*.svg result
 
     - name: Archive latex docs
       uses: actions/upload-artifact@v2
       if: always()
       with:
         name: Latex Documents
-        path: ./Documentation/Diagrams/result
+        path: ./ContinousIntegration/result
