@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd ../Documentation/Diagrams/
+
 # generate .png from all .tex in current directory
 
 for filename_with_extension in *.tex
@@ -17,6 +19,10 @@ do
     pdfcrop $filename.pdf $filename-tmp.pdf
     pdftoppm -png -r 800 $filename-tmp.pdf $filename
 
+
+    # convert .tex to .png 
+
+    pdf2svg $filename-tmp.pdf $filename.svg all
 done
 
 rm *.aux *.log *.pdf
