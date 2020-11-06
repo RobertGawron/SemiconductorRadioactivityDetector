@@ -45,7 +45,7 @@ void GMViewHistogram_ShowHistogram()
             uint16_t binValue = GMHistogram_GetBinValue(i, histogramBinAmount);
             uint32_t normalizedBinValue = binValue * graphHeight/ maxBinValue;
 
-            uint8_t x1 = binWidthOnDisplay - 1; // one pixel to avoiid overlap
+            uint8_t x1 = binWidthOnDisplay - 1; // one pixel to avoid overlap
             GMDisplayHW_DrawRectangle(x0, GMDisplayHW_GetDisplayHeight()-normalizedBinValue, x1, GMDisplayHW_GetDisplayHeight());
 
             x0 += binWidthOnDisplay;

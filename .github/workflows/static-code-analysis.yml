@@ -13,7 +13,7 @@ jobs:
     - name: install cppcheck and run tests
       run: |
         sudo apt-get install -y cppcheck 
-        cd ./ContinousIntegration       
+        cd ./ContinuousIntegration       
         chmod +x ./run_c_static_code_analysis.sh
         ls run_c_static_code_analysis.sh
         ./run_c_static_code_analysis.sh
@@ -23,7 +23,7 @@ jobs:
       if: always()
       run: |
         sudo pip install flake8 flake8-html 
-        cd ./ContinousIntegration
+        cd ./ContinuousIntegration
         chmod +x ./run_python_static_code_analysis.sh
         ls
         ./run_python_static_code_analysis.sh
@@ -33,11 +33,11 @@ jobs:
       if: always()
       with:
         name: Report for Python sources
-        path: ./ContinousIntegration/python_lint_repport/
+        path: ./ContinuousIntegration/python_lint_report/
 
     - name: Archive C results
       uses: actions/upload-artifact@v2
       if: always()
       with:
         name: Report for C sources
-        path: ./ContinousIntegration/C_Lint_*.txt     
+        path: ./ContinuousIntegration/C_Lint_*.txt     
