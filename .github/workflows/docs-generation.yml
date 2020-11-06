@@ -12,7 +12,7 @@ jobs:
     - name: install latex and generate documents
       run: |
         sudo apt-get install -y texlive-latex-base texlive-latex-extra texlive-extra-utils poppler-utils pdf2svg
-        cd ./ContinousIntegration
+        cd ./ContinuousIntegration
         chmod +x ./run_generate_docs.sh
         ./run_generate_docs.sh
         mkdir result
@@ -23,4 +23,4 @@ jobs:
       if: always()
       with:
         name: Latex Documents
-        path: ./ContinousIntegration/result
+        path: ./ContinuousIntegration/result

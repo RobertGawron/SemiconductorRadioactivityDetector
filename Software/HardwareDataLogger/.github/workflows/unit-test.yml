@@ -12,7 +12,7 @@ jobs:
     - name: Build and run tests      
       run: |
         sudo pip install pytest pytest-html
-        cd ./ContinousIntegration
+        cd ./ContinuousIntegration
         chmod +x ./run_unit_tests.sh
         ./run_unit_tests.sh
 
