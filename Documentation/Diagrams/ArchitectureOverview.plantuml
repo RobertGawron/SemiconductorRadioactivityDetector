@@ -1,0 +1,40 @@
+@startuml
+artifact "Power Supply\n(12V DC)" as power_supply
+
+artifact "Radioactive Sample" as sample
+
+package "Semiconductor Radioactivity Detector" as detector {
+    artifact "Semiconductor Sensor\n(3 x BPW34)" as sensor
+    artifact "Polarization Voltage\n(4 x 12V Batteries)" as polarization_voltage
+    artifact "Transimpedance Amplifier\n(OPA657U)" as transimpedance_amplifier
+    artifact "Inverting Amplifier\n(OPA656U)" as inverting_amplifier
+    artifact "ADC\n(LM358 as a comparator)" as adc 
+}
+
+interface "Analog Output" as analog_output
+interface "Digital Output\n(12V Signal)" as digital_output
+
+artifact "Hardware Data Logger\n(See sub-project description)" as data_logger
+artifact "Oscilloscope (for debugging)" as oscilloscope
+artifact "12V/3.3V Logic Level Converter\n(See sub-project description)" as logic_converter
+artifact "Microcontroller Board\n(Raspberry Pi, STM32 Nucleo, etc.)" as microcontroller
+
+' Connections between components
+sample -down-> sensor : "Radiation Decay"
+power_supply -down-> detector : "12V DC Power"
+
+polarization_voltage -left-> sensor : "12V Polarization"
+sensor --> transimpedance_amplifier : "Pulse of current when radiation particle detected"
+transimpedance_amplifier --> inverting_amplifier : "Amplified voltage pulse (analog signal)"
+inverting_amplifier --> adc : "Further amplified voltage pulse"
+
+adc --> digital_output : "12V Digital Signal"
+inverting_amplifier -down--> analog_output : "Analog Signal"
+
+' Outputs and connections to external devices
+analog_output --> oscilloscope : "Analog Monitoring"
+digital_output --> oscilloscope : "Digital Monitoring"
+digital_output --> data_logger : "Data Logging"
+digital_output --> logic_converter : "Logic Level Conversion"
+logic_converter --> microcontroller : "3.3V Digital Signal"
+@enduml

@@ -1,3 +1,3 @@
-# Filtration of output signal by using digital filter
+# Filtration of Output Signal Using a Digital Filter
 
-This is a dummy attempt to check how digital signal filtering could help removing noise. When writing this simulation, I didn't have the device, so couldn't use exact values. Nevertheless it seems that this will be helpful way to improve signal quality.
+This is an initial attempt to see how digital signal filtering could help in reducing noise. While writing this simulation, I didn’t have access to the actual device, so I couldn't use precise values. Nevertheless, it seems this approach will be a useful way to improve signal quality.
