@@ -1,0 +1,30 @@
+# KiCad 9 project temp & backup files
+*.000
+*.bak
+*.bck
+*.kicad_pcb-bak
+*.kicad_sch-bak
+*-backups
+*.kicad_prl
+*.sch-bak
+*.tmp
+_autosave-*
+*-save.pro
+*-save.kicad_pcb
+fp-info-cache
+*.lck
+\#auto_saved_files\#
+bom/
+
+# Netlist / autorouter / BOM / exported files
+*.net
+*.dsn
+*.ses
+*.xml
+*.csv
+
+# Other auto-generated/artifacts
+*.log
+*.raw
+*.cmp
+bom/
