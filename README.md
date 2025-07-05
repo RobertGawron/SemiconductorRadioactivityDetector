@@ -12,16 +12,39 @@ There are many ways to measure radioactivity levels. Semiconductor detectors sen
 
 ### Additional sub-components used:
 
-* [Hardware Data Logger](https://github.com/RobertGawron/HardwareDataLogger) - a pulse counter based on the NUCLEO dev board, featuring an additional shield for real-time data display via an LCD. It also supports local data storage on an SD card, remote storage via WiFi, and direct transfer to a PC through USB.
-* [Logic Level Converter](./Hardware/LogicLevelConverter/README.md) - for interfacing with boards that use 3.3V as the high logic level (all modern dev boards). Without this converter, directly connecting the signal from the detector to a GPIO pin would burn the GPIO.
+#### [Hardware Data Logger](https://github.com/RobertGawron/HardwareDataLogger)
+
+A pulse counter based on the NUCLEO dev board, featuring an additional shield for real-time data display via an LCD. It also supports local data storage on an SD card, remote storage via WiFi, and direct transfer to a PC through USB.
+
+#### [Auxiliary Board (Power Supply + Logic Level Converter)](./Hardware/PowerSupply/) 
+
+An auxiliary board was developed later on to fix things that weren’t included on the original board (because it's easier to add a new board than to rework the whole device). This board isn’t really a successful one, but it does its job. It has:
+
+**12V power supply (powered from a 15V wall adapter).** The device needs a very low-noise power supply. Originally, it was powered by a high-quality lab power supply. However, to make it more versatile, I tried using a cheap Chinese power supply and a power regulator. I chose the IC I had on hand (**NCP1117**), hoping it would do the job. It works, but it needs plenty—plenty—of capacitors to filter the voltage well enough. The values are updated on the schematic, but the PCB was left as-is.
+
+**Logic level converter,** to convert logic levels from 12V (high) and 0V (low)—as output by the sensor—to 3.3V (high) and 0V (low), which is standard for STM32 and cheap Chinese logic analyzers. This part also works partially: there's no 3.3V power supply on the board, so the output is open-collector type. This causes issues when using cheap 3.3V logic analyzers, since they don't have an external Vcc pin. Also, instead of just a transistor, a comparator would probably be better here.
+
+Overall, the auxiliary board works, but needs a complete rework.
+
+
 
 ## Hardware
 
-![Circuit of the Semiconductor Radioactivity Detector](./Documentation/Diagrams/Circuit.png)
+The sensor circuit is presented below, and its picture was shown above.
+
+[Sensor Assembly Instructions.](./Hardware/SemiconductorRadioactivityDetector/README.md)
+
+![Circuit of the Semiconductor Radioactivity Detector](./Hardware/SemiconductorRadioactivityDetector/SemiconductorRadioactivityDetector.svg)
+
+The auxiliary board and its circuit are shown below.
+
+
+![Auxiliary Board](./Documentation/Pictures/auxiliary_board_05_07_2025.jpg)
+
+![Circuit of the Auxiliary Board](./Hardware/PowerSupply/PowerSupply.svg)
+
 
 PCB project was done in KiCAD.
-
-[Device Assembly Instructions.](./Hardware/SemiconductorRadioactivityDetector/README.md)
 
 ## Software
 
