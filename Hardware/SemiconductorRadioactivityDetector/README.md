@@ -1,4 +1,5 @@
 # Extra Modifications
 
+* The device needs to be completely shielded from sunlight and electromagnetic interference. It should be placed in a grounded metal case. Where the sensor is located, a hole should be drilled and covered with aluminum foil. This taped hole is necessary because the metal enclosure is too thick and would block too much of the radiation. The foil is needed because the signal from sunlight is much stronger, and it would overwhelm the sensor, effectively turning it into a light detector.
 * As close as possible to the input power socket, I placed 1n/16V and 100n/16V capacitors in parallel. Without them, the device began oscillating randomly.
 * A Schottky diode is connected in series after the extra capacitors mentioned above to reduce the risk of damaging the device when the power supply is connected incorrectly. I'm not sure if it will help enough, but I’ve already damaged one PCB this way, so now it's included.
