@@ -27,4 +27,8 @@ bom/
 *.log
 *.raw
 *.cmp
+*.pcb3d
+*.png
+*.jpg
+*.jpeg
 bom/
